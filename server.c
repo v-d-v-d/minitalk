@@ -6,7 +6,7 @@
 /*   By: vdunatte <vdunatte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 23:19:24 by vi                #+#    #+#             */
-/*   Updated: 2024/07/21 00:36:07 by vdunatte         ###   ########.fr       */
+/*   Updated: 2024/07/21 01:18:19 by vdunatte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,7 @@ void	handler(int signo)
 	static char	*str = NULL;
 
 	if (signo == SIGUSR1)
-	{	
-		c = c << 1;
-		c = c | 0b1;
-	}
+		c = (c << 1) | 0b1;
 	if (signo == SIGUSR2)
 		c = c << 1;
 	if (++i == 8)

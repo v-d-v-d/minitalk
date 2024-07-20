@@ -6,7 +6,7 @@
 /*   By: vdunatte <vdunatte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/08 14:46:37 by vi                #+#    #+#             */
-/*   Updated: 2024/07/21 00:55:43 by vdunatte         ###   ########.fr       */
+/*   Updated: 2024/07/21 01:25:30 by vdunatte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ void	send_signal(int pid, int nb)
 			kill(pid, SIGUSR2);
 		nb = nb << 1;
 		i++;
-		usleep(500);
+		usleep(750);
 	}
+	usleep(750);
 }
 
 void	send_message(int pid, char *str)
@@ -51,6 +52,3 @@ int	main(int argc, char **argv)
 	send_message(pid, argv[2]);
 	return (0);
 }
-
-
-
