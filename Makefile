@@ -6,8 +6,8 @@ NAME_s = server
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g -Ilibft 
 # Fichiers sources et objets
-SRC_c = client.c\
-
+SRC_c = client.c
+SRC_s = server.c
 
 OBJ_c= $(SRC_c:.c=.o)
 OBJ_s = $(SRC_s:.c=.o)

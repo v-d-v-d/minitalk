@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vi <vi@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: vdunatte <vdunatte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 23:19:24 by vi                #+#    #+#             */
-/*   Updated: 2024/06/13 21:22:05 by vi               ###   ########.fr       */
+/*   Updated: 2024/07/21 00:36:07 by vdunatte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,8 @@ void	stock(char **str1, char c)
 		srtnew = ft_strdup (*str1);
 		free(*str1);
 	}
-	if (srtnew == NULL || str2 == NULL )
-	{
-		if (srtnew == NULL && str2 == NULL)
-			*str1 = ft_strjoin("", "");
-		if (srtnew == NULL && str2 != NULL)
-			*str1 = ft_strjoin("", str2);
-		if (srtnew != NULL && str2 == NULL)
-			*str1 = ft_strjoin(srtnew, "");
-	}
+	if (srtnew == NULL)
+		*str1 = ft_strjoin("", str2);
 	else
 		*str1 = ft_strjoin(srtnew, str2);
 	if (*str1 != NULL)
@@ -51,16 +44,13 @@ void	handler(int signo)
 	static char	*str = NULL;
 
 	if (signo == SIGUSR1)
-	{
+	{	
 		c = c << 1;
 		c = c | 0b1;
 	}
 	if (signo == SIGUSR2)
-	{
 		c = c << 1;
-	}
-	i++;
-	if (i == 8)
+	if (++i == 8)
 	{
 		i = 0;
 		if (c == '\0')

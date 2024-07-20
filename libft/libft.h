@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vi <vi@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: vdunatte <vdunatte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 22:01:04 by vdunatte          #+#    #+#             */
-/*   Updated: 2024/06/08 15:55:58 by vi               ###   ########.fr       */
+/*   Updated: 2024/07/20 23:18:47 by vdunatte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int		ft_atoi(const char *nptr);//norm / paco-k
 void	ft_bzero(void *s, size_t n);//norm / paco-k
 void	*ft_calloc(size_t nmemb, size_t size);//norm / paco-k
-int 	ft_error(char *str);
+int		ft_error(char *str);
 int		ft_isalnum(int c);//norm / paco-k
 int		ft_isalpha(int c);//norm / paco-k
 int		ft_isascii(int c);//norm / paco-k
